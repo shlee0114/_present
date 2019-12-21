@@ -5,7 +5,7 @@ import android.graphics.drawable.ColorDrawable
 import android.view.View
 import androidx.core.graphics.ColorUtils
 
-class colorChecker {
+class   colorChecker {
     val LightColor = true
     val DarkColor = false
 

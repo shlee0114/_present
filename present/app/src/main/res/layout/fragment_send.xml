@@ -31,7 +31,8 @@
 			android:layout_height="50dp"
 			android:layout_marginBottom="50dp"
 			android:textColor="@color/colorBlack"
-			android:layout_gravity="center"/>
+			android:layout_gravity="center"
+            android:id="@+id/addPic"/>
 
 
 	</LinearLayout>
@@ -67,7 +68,8 @@
 				android:background="@drawable/edittext_bottom_line"
 				android:layout_marginTop="10dp"
 				android:layout_marginBottom="10dp"
-				android:layout_marginLeft="10dp" />
+				android:layout_marginLeft="10dp"
+                android:id="@+id/name"/>
 
 			<View
 				android:layout_width="0dp"
@@ -101,7 +103,8 @@
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
 					android:text="0/300"
-					android:gravity="center"/>
+					android:gravity="center"
+                    android:id="@+id/textNum"/>
 				<View
 					android:layout_width="0dp"
 					android:layout_height="0dp"
@@ -118,6 +121,7 @@
 				android:textColor="@color/colorBlack"
 				android:layout_marginLeft="40dp"
 				android:layout_marginRight="40dp"
+                android:id="@+id/sendText"
 				/>
 
 		</LinearLayout>
@@ -130,7 +134,8 @@
 			android:textSize="20dp"
 			android:textColor="@color/colorRealWhite"
 			android:background="@drawable/ic_yellow_button"
-			android:layout_height="50dp"/>
+			android:layout_height="50dp"
+            android:id="@+id/nextLv"/>
 
 	</LinearLayout>
 

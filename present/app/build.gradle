@@ -57,6 +57,6 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     annotationProcessor "com.github.bumptech.glide:compiler:$glideCompilerVersion"
 
-//    edittext_bottom_line
+//    test
     testImplementation 'junit:junit:4.12'
 }

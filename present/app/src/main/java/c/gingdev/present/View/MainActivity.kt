@@ -2,6 +2,7 @@ package c.gingdev.present.View
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import c.gingdev.present.Constructor.MainViewConstructor
 import c.gingdev.present.Presenter.MainPresenter
 import c.gingdev.present.R
@@ -32,10 +33,27 @@ class MainActivity : AppCompatActivity(), MainViewConstructor.View {
 		}
 
 		private fun initViewPager() {
-				presenter.requirePagerAdpater()
+				presenter.requirePagerAdpater(supportFragmentManager, lifecycle)
+
+				bottomNav.setOnNavigationItemSelectedListener {
+					when(it.itemId) {
+						R.id.send_present -> {
+							pager.setCurrentItem(0, true)
+						}
+						R.id.get_present -> {
+							pager.setCurrentItem(1, true)
+						}
+						R.id.setting -> {
+							pager.setCurrentItem(2, true)
+						}
+					}
+
+					true
+				}
 		}
 
-		override fun responsePagerAdapter() {
-
+		override fun responsePagerAdapter(adapter: FragmentStateAdapter) {
+				pager.adapter = adapter
+				pager.isUserInputEnabled = false
 		}
 }

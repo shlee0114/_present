@@ -28,21 +28,16 @@ class SplashActivity: AppCompatActivity(), SplashViewConstructor.View {
         when(loginType) {
             SplashViewConstructor.LoginType.KAKAO -> {
 //                카카오로그인일시
-                str = "kakao"
             }
             SplashViewConstructor.LoginType.LOCAL -> {
 //                로컬 로그인일시
-                str = "local"
             }
             SplashViewConstructor.LoginType.NONE -> {
 //                로그인해야할경우
-                str = "none"
 	              intent = Intent(this, MainActivity::class.java)
             }
         }
 
-
 	      startActivity(intent!!)
-        Toast.makeText(this, str, Toast.LENGTH_SHORT).show()
     }
 }

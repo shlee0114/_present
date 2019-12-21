@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import c.gingdev.present.Constructor.MainViewConstructor
+import c.gingdev.present.Model.permissionModels
 import c.gingdev.present.Presenter.MainPresenter
 import c.gingdev.present.R
 import c.gingdev.present.Utils.etc.checkBackgroundColor
 import c.gingdev.present.Utils.etc.getStatusBarHeight
+import c.gingdev.present.Utils.etc.permissionChecker
 import c.gingdev.present.Utils.etc.statusBarTransparent
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -24,6 +26,20 @@ class MainActivity : AppCompatActivity(), MainViewConstructor.View {
 
 				initStatusBar()
 				initViewPager()
+	val pModel = permissionModels()
+	var pList = arrayOf(pModel.readExStorage)
+	val pChker = permissionChecker()
+	pChker.RequestPermission(this,
+			pList,
+		1,
+		object : permissionChecker.RequestPermissionListener {
+			override fun onSuccess() {
+			}
+
+			override fun onFailed() {
+				finish()
+			}
+		})
     }
 
 		private fun initStatusBar() {

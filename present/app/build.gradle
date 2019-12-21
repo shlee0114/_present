@@ -59,6 +59,4 @@ dependencies {
 
 //    test
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.edittext_bottom_line.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.edittext_bottom_line.espresso:espresso-core:3.2.0'
 }

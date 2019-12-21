@@ -11,7 +11,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.edittext_bottom_line.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -57,8 +57,8 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     annotationProcessor "com.github.bumptech.glide:compiler:$glideCompilerVersion"
 
-//    test
+//    edittext_bottom_line
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.edittext_bottom_line.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.edittext_bottom_line.espresso:espresso-core:3.2.0'
 }

@@ -4,17 +4,9 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 
-	<TextView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-
-		android:text="tlqkf"
-		android:textSize="24sp"
-		android:textColor="@color/colorBlack"
-
-		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintBottom_toBottomOf="parent"/>
+	<androidx.viewpager2.widget.ViewPager2
+		android:id="@+id/getPager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,19 @@ import androidx.appcompat.app.AppCompatActivity
 import c.gingdev.present.Constructor.SplashViewConstructor
 import c.gingdev.present.Presenter.SplashPresenter
 import c.gingdev.present.R
+import kotlin.concurrent.thread
+import androidx.core.os.HandlerCompat.postDelayed
+
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.os.Handler
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+
+
+
+
 
 class SplashActivity: AppCompatActivity(), SplashViewConstructor.View {
     //    prestener 생성 by lazy
@@ -18,8 +31,14 @@ class SplashActivity: AppCompatActivity(), SplashViewConstructor.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+    }
 
-        presenter.requestLoginType()
+    override fun onStart() {
+        super.onStart()
+        Handler().postDelayed({
+            startActivity(Intent(this, MainActivity::class.java))
+            this.finish()
+        },1000)
     }
 
     override fun onLoginTypeResponse(loginType: SplashViewConstructor.LoginType) {
@@ -37,7 +56,6 @@ class SplashActivity: AppCompatActivity(), SplashViewConstructor.View {
 	              intent = Intent(this, MainActivity::class.java)
             }
         }
-
-	      startActivity(intent!!)
+        startActivity(intent!!)
     }
 }

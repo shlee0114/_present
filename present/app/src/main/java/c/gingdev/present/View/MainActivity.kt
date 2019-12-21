@@ -2,13 +2,19 @@ package c.gingdev.present.View
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import c.gingdev.present.Constructor.MainViewConstructor
+import c.gingdev.present.Presenter.MainPresenter
 import c.gingdev.present.R
 import c.gingdev.present.Utils.etc.checkBackgroundColor
 import c.gingdev.present.Utils.etc.getStatusBarHeight
 import c.gingdev.present.Utils.etc.statusBarTransparent
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MainViewConstructor.View {
+
+	private val presenter by lazy {
+				MainPresenter(this)
+		}
 
 //    onCreate
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 				initStatusBar()
+				initViewPager()
     }
 
 		private fun initStatusBar() {
@@ -24,4 +31,11 @@ class MainActivity : AppCompatActivity() {
 				checkBackgroundColor(background)
 		}
 
+		private fun initViewPager() {
+				presenter.requirePagerAdpater()
+		}
+
+		override fun responsePagerAdapter() {
+
+		}
 }

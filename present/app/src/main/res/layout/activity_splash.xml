@@ -2,18 +2,40 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
+        android:id="@+id/ShellWeShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="Test"
-        android:textSize="48sp"
+        android:textAlignment="center"
+        android:text="우리 서로\n 나눠볼까요?"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
 
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="24dp"
+
+        app:layout_constraintVertical_chainStyle="packed"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/HmmIcon"/>
 
+    <ImageView
+        android:id="@+id/HmmIcon"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+
+        android:src="@drawable/hmm"
+
+        app:layout_constraintVertical_chainStyle="packed"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

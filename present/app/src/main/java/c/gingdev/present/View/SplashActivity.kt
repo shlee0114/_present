@@ -1,5 +1,6 @@
 package c.gingdev.present.View
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +24,7 @@ class SplashActivity: AppCompatActivity(), SplashViewConstructor.View {
 
     override fun onLoginTypeResponse(loginType: SplashViewConstructor.LoginType) {
         var str: String = ""
+	      var intent: Intent? = null
         when(loginType) {
             SplashViewConstructor.LoginType.KAKAO -> {
 //                카카오로그인일시
@@ -35,9 +37,12 @@ class SplashActivity: AppCompatActivity(), SplashViewConstructor.View {
             SplashViewConstructor.LoginType.NONE -> {
 //                로그인해야할경우
                 str = "none"
+	              intent = Intent(this, MainActivity::class.java)
             }
         }
 
+
+	      startActivity(intent!!)
         Toast.makeText(this, str, Toast.LENGTH_SHORT).show()
     }
 }

@@ -1,12 +1,8 @@
 package c.gingdev.present.Presenter
 
 import c.gingdev.present.Constructor.SplashViewConstructor
-import c.gingdev.present.Utils.RetrofitService
-import c.gingdev.present.Utils.RetrofitUtils
-import com.google.gson.JsonObject
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import c.gingdev.present.Utils.retrofit.RetrofitService
+import c.gingdev.present.Utils.retrofit.RetrofitUtils
 
 class SplashPresenter(override val view: SplashViewConstructor.View)
     : SplashViewConstructor.Presenter {
@@ -17,6 +13,6 @@ class SplashPresenter(override val view: SplashViewConstructor.View)
 		}
 
     override fun requestLoginType() {
-        view.onLoginTypeResponse(SplashViewConstructor.LoginType.LOCAL)
+        view.onLoginTypeResponse(SplashViewConstructor.LoginType.NONE)
     }
 }

@@ -1,7 +1,7 @@
 package c.gingdev.present
 
 import android.util.Log
-import c.gingdev.present.Utils.RetrofitUtils
+import c.gingdev.present.Utils.retrofit.RetrofitUtils
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -16,13 +16,4 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
-
-		@Test
-		fun retrofiTest() {
-				val retrofit = RetrofitUtils().getRetrofitService()
-
-				retrofit.testConnection().doOnSuccess {
-						Log.e("test", it.asString)
-				}
-		}
 }

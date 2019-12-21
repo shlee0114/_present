@@ -1,4 +1,4 @@
-package c.gingdev.present.Utils
+package c.gingdev.present.Utils.retrofit
 
 import com.google.gson.JsonObject
 import retrofit2.Call

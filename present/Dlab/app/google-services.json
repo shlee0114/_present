@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "6199368405",
+    "firebase_url": "https://dlab-2aea7.firebaseio.com",
+    "project_id": "dlab-2aea7",
+    "storage_bucket": "dlab-2aea7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6199368405:android:825ab5e01c9332293d605c",
+        "android_client_info": {
+          "package_name": "c.gingdev.dlab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6199368405-n03845j7dh8c6o7aeeqmc4anr64ktcvv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "c.gingdev.dlab",
+            "certificate_hash": "a4cc5e033e8cc6593e8d7c8e4d7dfeeb641e6725"
+          }
+        },
+        {
+          "client_id": "6199368405-keq1tl2jq6ia6kfusk2k1fuue6gl9uj6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHOyuOsIabmcZ0GvpBoJuDXRUkiwyNB4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6199368405-keq1tl2jq6ia6kfusk2k1fuue6gl9uj6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

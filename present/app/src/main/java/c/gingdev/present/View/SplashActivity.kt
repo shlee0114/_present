@@ -17,6 +17,10 @@ import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 
+
+
+
+
 class SplashActivity: AppCompatActivity(), SplashViewConstructor.View {
     //    prestener 생성 by lazy
     private val presenter by lazy {

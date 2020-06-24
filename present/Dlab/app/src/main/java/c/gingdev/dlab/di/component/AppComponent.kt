@@ -4,6 +4,7 @@ import android.app.Application
 import c.gingdev.dlab.base.App
 import c.gingdev.dlab.di.module.basic.AppModule
 import c.gingdev.dlab.di.module.network.NetworkModule
+import c.gingdev.dlab.di.module.view.ActivityBindingModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -15,7 +16,7 @@ import javax.inject.Singleton
 @Component(modules = [
     AppModule::class,
     AndroidSupportInjectionModule::class,
-    NetworkModule::class])
+    ActivityBindingModule::class])
 interface AppComponent: AndroidInjector<DaggerApplication> {
 
     fun inject(app: App)

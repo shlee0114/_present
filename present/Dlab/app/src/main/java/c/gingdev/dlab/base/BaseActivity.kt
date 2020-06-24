@@ -13,7 +13,9 @@ abstract class BaseActivity: DaggerAppCompatActivity() {
 //    기본 injection 및 액티비티 기
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
+    
         super.onCreate(savedInstanceState)
+        setContentView(layoutRes())
 
         onCreated(savedInstanceState)
     }
